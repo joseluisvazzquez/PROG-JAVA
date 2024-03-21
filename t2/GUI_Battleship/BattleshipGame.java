@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 public class BattleshipGame extends JFrame {
     private int table = 5;
     private int numBarcos = 5;
-
+    private int balas = 10;
     public BattleshipGame() {
         pack();
         setVisible(true);
@@ -33,14 +33,16 @@ public class BattleshipGame extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                         
-                        for(int j = 0; j<5; j++){
-                            int random1 = r.nextInt(table*table) -1;
-                            if(button.getText().equals(String.valueOf(random1))){
-                                button.setBackground(Color.GREEN);
-                            }else{
-                                button.setBackground(Color.BLUE);
-                            }
-                        }
+                    int random1 = r.nextInt(table*table) -1;
+
+                    if(button.getText().equals(String.valueOf(random1))){
+                        button.setBackground(Color.GREEN);
+                        button.setEnabled(false);
+                    }else{
+                        button.setBackground(Color.BLUE);
+                        button.setEnabled(false);
+                    }
+                        
                     
                 }
                 
