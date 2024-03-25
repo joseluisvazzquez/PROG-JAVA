@@ -9,14 +9,14 @@ import java.util.List;
 import javax.swing.JButton; 
 import javax.swing.JFrame;
 
-public class BattleshipGame extends JFrame {
+public class BattleshipGame2 extends JFrame {
     private int table = 5;
     private int numBarcos = 5;
     private int balas = 10;
 
     private int random1;
     private List<Integer> posicionesBarco = new ArrayList<>();
-    public BattleshipGame() {
+    public BattleshipGame2() {
         pack();
         setVisible(true);
         setLayout(new GridLayout(table,table));
